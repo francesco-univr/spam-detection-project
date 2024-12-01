@@ -1,4 +1,4 @@
-# Importing necessary libraries for data processing, visualization, and modeling
+# Importing necessary libraries for data processing, visualization, and modeling 
 import pandas as pd
 import nltk
 from nltk.corpus import stopwords
@@ -18,6 +18,18 @@ emails_data = pd.read_csv(dataset_path)
 
 print("\nOriginal dataset (first 5 rows):")
 print(emails_data.head())
+
+# Step 2.1: Check for null values
+print("\nChecking for null values in the dataset...")
+null_values = emails_data.isnull().sum()
+print(null_values)
+
+# Handle null values if present
+if null_values.sum() > 0:
+    print("\nNull values detected. Filling null values with 0.")
+    emails_data = emails_data.fillna(0)
+else:
+    print("\nNo null values detected. Proceeding with the analysis.")
 
 # Step 2: Preprocessing - Remove unnecessary columns
 emails_data_cleaned = emails_data.drop(columns=["Email No."])
@@ -80,6 +92,7 @@ plt.xlabel("Recall")
 plt.ylabel("Precision")
 plt.legend(loc="lower left")
 plt.show()
+
 
 
 
