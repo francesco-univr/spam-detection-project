@@ -12,8 +12,7 @@ import matplotlib.pyplot as plt
 nltk.download('stopwords')
 
 # Step 1: Load the Dataset
-# Assuming "emails.csv" is in the current working directory
-dataset_path = "emails.csv"  # Replace with the correct path if needed
+dataset_path = "emails.csv"
 emails_data = pd.read_csv(dataset_path)
 
 print("\nOriginal dataset (first 5 rows):")
