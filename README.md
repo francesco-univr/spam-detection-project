@@ -24,7 +24,6 @@ The dataset contains emails labeled as spam or non-spam. Columns represent the c
   - `scikit-learn`
   - `matplotlib`
   - `seaborn`
-  - `gdown`
 
 ## Usage
 1. Clone the repository:
